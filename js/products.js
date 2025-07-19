@@ -16,33 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function clearDatabase() {
 
-        document.querySelector('#clear-database').addEventListener('click', function (e) {
-            e.preventDafault;
+        document.getElementById('clear-database').addEventListener('click', function (params) {
+            document.querySelector('#clear-database').addEventListener('click', function (e) {
+                e.preventDafault;
 
-            if (!confirm("Are you sure you want to clear the database? This action cannot be undone.")) {
-                return;
-            }
+                if (!confirm("Are you sure you want to clear the database? This action cannot be undone.")) {
+                    return;
+                }
 
-            localStorage.removeItem('products');
+                localStorage.removeItem('products');
 
-            location.reload(); // Reload the page to reflect changes
-        });
+                location.reload(); // Reload the page to reflect changes
+            });
+        })
+ 
     }
 
-    function clearDatabase() {
-
-        document.querySelector('#clear-database').addEventListener('click', function (e) {
-            e.preventDafault;
-
-            if (!confirm("Are you sure you want to clear the database? This action cannot be undone.")) {
-                return;
-            }
-
-            localStorage.removeItem('products');
-
-            location.reload(); // Reload the page to reflect changes
-        });
-    }
 
     function fetchAndStoreProducts() {
         fetch("https://dummyjson.com/products")
