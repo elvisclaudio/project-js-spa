@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
     function fetchAndStoreProducts() {
         fetch("https://dummyjson.com/products")
             .then((response) => {
