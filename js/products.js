@@ -14,7 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clearDatabase();
 
-    alert(123);
+    function clearDatabase() {
+
+        document.querySelector('#clear-database').addEventListener('click', function (e) {
+            e.preventDafault;
+
+            if (!confirm("Are you sure you want to clear the database? This action cannot be undone.")) {
+                return;
+            }
+
+            localStorage.removeItem('products');
+
+            location.reload(); // Reload the page to reflect changes
+        });
+    }
 
     function fetchAndStoreProducts() {
         fetch("https://dummyjson.com/products")
