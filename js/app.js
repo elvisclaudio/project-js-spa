@@ -2,4 +2,6 @@
 
 let pageLayout = document.querySelector('#page-layout');
 
-console.log('pageLayout', pageLayout);
+console.log('pageLayout1', pageLayout);
+
+console.log("test");
