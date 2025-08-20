@@ -2,4 +2,4 @@
 
 let pageLayout = document.querySelector('#page-layout');
 
-console.log('pageLayout', pageLayout);
+console.log('pageLayou2t', pageLayout);
